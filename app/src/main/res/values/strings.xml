@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Tortoise and Hare</string>
+    <string name="hare">Hare</string>
+    <string name="tortoise">Tortoise</string>
+    <string name="start">Start!</string>
+    <string name="Click_Start">Click Start!</string>
+</resources>
