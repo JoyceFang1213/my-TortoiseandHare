@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">龜兔賽跑</string>
+    <string name="hare">兔子</string>
+    <string name="tortoise">烏龜</string>
+    <string name="start">開始</string>
+    <string name="Click_Start">點即開始!</string>
+</resources>
