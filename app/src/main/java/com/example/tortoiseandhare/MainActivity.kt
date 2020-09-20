@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             if (turtleProgress == 100 ||
                     rabProgress == 100) {
                 reset()
+                turPre = true
             }
         }
 
@@ -67,6 +68,7 @@ class MainActivity : AppCompatActivity() {
             if (turtleProgress == 100 ||
                 rabProgress == 100) {
                 reset()
+                rabPre = true
             }
         }
     }
@@ -87,7 +89,10 @@ class MainActivity : AppCompatActivity() {
     private fun notifyPre() {
         if (turtleProgress == 100 ||
                 rabProgress == 100) {
-            return
+            Toast.makeText(
+                this,
+                "Press start to start new round",
+                Toast.LENGTH_SHORT).show()
         }
         else if (!turPre && !rabPre) {
             Toast.makeText(
