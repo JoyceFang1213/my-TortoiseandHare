@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
     private var rabPre = false
     private var turPre = false
 
+    private var alarm = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (turtleProgress == 100) {
                     Toast.makeText(this, "Turtle win!", Toast.LENGTH_SHORT).show()
+                    alarm = true
                 }
             } else {
                 notifyPre()
@@ -46,6 +49,7 @@ class MainActivity : AppCompatActivity() {
 
                 if (rabProgress == 100) {
                     Toast.makeText(this, "Rabbit win!", Toast.LENGTH_SHORT).show()
+                    alarm = true
                 }
             } else {
                 notifyPre()
@@ -89,10 +93,15 @@ class MainActivity : AppCompatActivity() {
     private fun notifyPre() {
         if (turtleProgress == 100 ||
                 rabProgress == 100) {
-            Toast.makeText(
-                this,
-                "Press start to start new round",
-                Toast.LENGTH_SHORT).show()
+            if (alarm) {
+                Toast.makeText(
+                    this,
+                    "Press start to start new round",
+                    Toast.LENGTH_SHORT
+                ).show()
+
+                alarm = false
+            }
         }
         else if (!turPre && !rabPre) {
             Toast.makeText(
